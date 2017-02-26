@@ -21,13 +21,20 @@
 
     <style type="text/css">
         body{
-            padding-top: 70px;
+            padding-top: 50px;
         }
     </style>
 </head>
 <body>
 
-@include('navbar')
+<?php
+
+use Illuminate\Support\Facades\Route;
+$currentPath = Route::getFacadeRoot()->current()->uri();
+$currentPathParts = explode('/', $currentPath);
+$currentPageType = strtolower( $currentPathParts[0] );
+?>
+@include('navbar', ['type' => $currentPageType ])
 
 @yield('content')
 
