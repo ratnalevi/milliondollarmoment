@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 <footer>
     <div class="container">
         <div class="row">
@@ -42,10 +41,6 @@
                     </div>
                 </div>
 
-                <div class="clearfix"></div>
-                <div class="copyright visible-sm visible-xs">
-                    <p>Developed By : <a href="javascript:void(0)" title="">Allam Levi Ratnakar</a></p>
-                </div>
             </div>
         </div>
     </div>

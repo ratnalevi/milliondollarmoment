@@ -23,6 +23,11 @@ class ContactUSController extends Controller
                 'name' => $request->get('name'),
                 'email' => $request->get('email'),
                 'mobile' => $request->get('mobile'),
+                'event_type' => $request->get('event_type'),
+                'surprise_type' => $request->get('surprise_type'),
+                'event_date' => $request->get('event_date'),
+                'guest_count' => $request->get('amount'),
+                'reach_factor' => $request->get('reach_factor'),
                 'user_message' => $request->get('message')
             ), function($message) {
                 $message->from('ratnalevi@gmail.com');

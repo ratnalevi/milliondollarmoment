@@ -26,7 +26,14 @@ class ContactFormRequest extends FormRequest
         return [
             'name' => 'required',
             'email' => 'required|email',
-            'message' => 'required',
+            'mobile' => 'required|regex:/^[7-9][0-9]{9}$/',
+            'location' => 'required',
+            'event_type' => '',
+            'surprise_type' => '',
+            'event_date' => 'required|date|after_or_equal:date',
+            'guest_count' => '',
+            'reach_factor' => '',
+            'message' => '',
         ];
     }
 }

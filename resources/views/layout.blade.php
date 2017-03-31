@@ -6,26 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Million Dollar Moments</title>
 
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap-theme.min.css') }}">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="{{ asset('css/full-slider.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link rel='stylesheet' id='Main-Style-css'  href="{{ asset('/css/style.css') }}" type='text/css' media='all' />    
+    <link rel='stylesheet' id='menu-style-css'  href="{{ asset('/css/component.css') }}" type='text/css' media='all' />
+    <link rel='stylesheet' id='carousel-Style-css'  href='http://geethaarts.com/wp-content/themes/geetha/framework/css/flexslider.css?ver=1.0' type='text/css' media='all' />
 
+<link href='http://fonts.googleapis.com/css?family=Exo:400,900' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 
-    <style type="text/css">
-        body{
-            padding-top: 50px;
-        }
-    </style>
 </head>
-<body>
+<body class="hidden-sn">
 
 <?php
 
@@ -33,23 +25,91 @@ use Illuminate\Support\Facades\Route;
 $currentPath = Route::getFacadeRoot()->current()->uri();
 $currentPathParts = explode('/', $currentPath);
 $currentPageType = strtolower( $currentPathParts[0] );
+$baseUrl = 'http://' . $_SERVER['HTTP_HOST'];
+$logoUrl = $baseUrl . '/img/million_logo.jpg';
+
 ?>
-@include('navbar', ['type' => $currentPageType ])
 
-@yield('content')
+<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s2">
+    <h3>Menu</h3>
 
-@include('footer')
+    <div class="menu-container"><ul id="top-menu" class="nav navbar-nav"><li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item menu-item-34"><a href="{{ $baseUrl }}">Home</a></li>
+            <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="{{ $baseUrl }}/surprise">Surprises</a></li>
+            <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="{{ $baseUrl }}/about/">About Us</a></li>
+            <li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="{{ $baseUrl }}/contact/">Contact Us</a></li>
+        </ul></div>      <div class="clearfix">
+    </div>
+    <ul class="list-inline social-menu">
+        <li><a href="https://www.instagram.com/themilliondollarmoment" target="_blank"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://www.facebook.com/themilliondollarmoment" target="_blank"><i class="fa fa-facebook"></i></a></li>
+    </ul>
+</div>
+<div id="page_wrapper"><!--  Page Wrapper -->
+    <header role="banner" id="header-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1 col-sm-1 col-xs-2">
+                    <nav class="navbar navbar-default" role="navigation"><!--  Nav -->
+                        <button type="button" class="navbar-toggle" id="menu-right">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </nav>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-4 logo text-left">
+                    <a href="{{ $baseUrl  }}">
+                        <img src="{{ $logoUrl }}" style="width: 35%; max-width: 35%;" alt='Million Dollar Moments' />
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                    <ul class="list-inline social-links">
+                        <li><a href="https://www.instagram.com/themilliondollarmoment" target="_blank"><i style="font-size:16px" class="fa">&#xf16d;</i></a></li>
+                        <li><a href="https://www.facebook.com/themilliondollarmoment" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div><!-- End Container -->
+    </header>
+
+    @yield('content')
+
+    @if( $currentPageType !== '' )
+        <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+        @include('footer')
+    @else 
+        <link rel="stylesheet" href="{{ asset('css/home-footer.css') }}">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <span class="text-left">&copy; 2017 Million Dollar Moments. All Rights Reserved.</span>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <ul class="list-inline">
+                            <li>
+                                <a href="{{ $baseUrl }}">Home</a>
+                            </li>
+                            <li>
+                                <a href="{{ $baseUrl }}/about">About Us</a>
+                            </li>
+                            <li>
+                                <a href="{{ $baseUrl }}/contact">Contact</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    @endif
 </body>
 
-<script src="{{ asset('js/jquery.js') }}"></script>
-<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 
-<!-- Script to Activate the Carousel -->
-<script>
-    $('.carousel').carousel({
-        interval: 2000 //changes the speed
-    })
-</script>
+<script type='text/javascript' src="{{ asset('js/classie.js') }}"></script>
+<script type='text/javascript' src="{{ asset('js/scripts.js') }}"</script>
+<script type='text/javascript' src='http://geethaarts.com/wp-content/themes/geetha/framework/js/jquery.flexslider-min.js?ver=1.0'></script>
 
-
+<!-- <script type='text/javascript' src='http://geethaarts.com/wp-content/themes/geetha/framework/js/scripts.js?ver=1.0'></script> -->
 </html>

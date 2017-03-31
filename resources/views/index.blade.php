@@ -1,40 +1,66 @@
-@extends('layout')
+    @extends('layout')
 
 @section('content')
-<header id="myCarousel" class="carousel slide">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
+    
+    <script>
 
-    <!-- Wrapper for Slides -->
-    <div class="carousel-inner">
-        <div class="item active">
-            <!-- Set the first background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('https://www.everafterguide.com/s/upload/images/2016/06/8966360aa2dac0d9138ad8df8f65a15a.jpg');"></div>
-        </div>
-        <div class="item">
-            <!-- Set the second background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('http://static.asiawebdirect.com/m/bangkok/portals/huahin-bangkok-com/homepage/nightlife/so-sofitel-hua-hin/allParagraphs/00/BucketList/0/image2/SO-Sofitel-Hua-Hin-7.jpg');"></div>
-        </div>
-        <div class="item">
-            <!-- Set the third background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('http://www.liveinstyle.com/sites/default/files/images/ee/Thailand_Koh_Phangan_Full_Moon_Party_CC_hadsie_884_1.jpg');"></div>
-            {{--<div class="carousel-caption">--}}
-                {{--<h2>Caption 3</h2>--}}
-            {{--</div>--}}
-        </div>
-    </div>
+    function shiftSlide(){
 
-    <!-- Controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="icon-prev"></span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="icon-next"></span>
-    </a>
+        var slides = $('#million-dollar-slides').find('li');
+        var nextElem;
+        slides.each( function(){
+            if( $(this).hasClass('flex-active-slide') ){
+                if( $(this).next().length > 0 ){
+                    nextElem = $(this).next();
+                }else{
+                    nextElem = $(this).prev();
+                }
+                $(this).removeClass('flex-active-slide')
+                $(this).css('zIndex','1');
+                $(this).css('opacity', '0');
+            }
+        });
 
-</header>
+        if( nextElem != null ){
+            nextElem.addClass('flex-active-slide');
+            nextElem.css('zIndex', '2');
+            nextElem.css('opacity', '1');
+        }
+
+    }
+
+    setInterval( shiftSlide, 3000);
+
+    </script>
+
+    <section class="slider-wrapper">
+    <div class="flexislider">
+        <ul class="slides" id="million-dollar-slides">
+        <li class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;">
+                <div class="flex-slide-data">
+                    <img src="{{ asset( 'img/homepage/homepage_1.jpg' ) }}" alt="" draggable="false">
+                </div>
+            </li>
+            <li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
+                <div class="flex-slide-data">
+                    <img src="{{ asset( 'img/homepage/homepage_2.jpeg' ) }}" alt="" draggable="false">
+                </div>
+            </li>
+            <li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
+                <div class="flex-slide-data">
+                    <img src="{{ asset( 'img/homepage/homepage_3.jpg' ) }}" alt="" draggable="false">
+                </div>
+            </li>
+        </ul>
+    <ol class="flex-control-nav flex-control-paging"><li><a class="flex-active">1</a></li><li><a class="">2</a></li><li><a class="">3</a></li><li><a class="">4</a></li></ol><ul class="flex-direction-nav"><li><a class="flex-prev" href="#">Previous</a></li><li><a class="flex-next" href="#">Next</a></li></ul></div>
+    <div class="home-page-content">
+                    <div class="page-content container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                            </div>
+                </div>
+            </div>
+            </div>
+    
+</section>
 @endsection
