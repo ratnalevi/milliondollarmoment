@@ -83,6 +83,8 @@ $logoUrl = $baseUrl . '/img/million_logo.jpg';
         <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
         @include('footer')        
     @endif
+    
+    </div>
 </body>
 
 

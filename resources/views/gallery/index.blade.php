@@ -42,6 +42,15 @@ $per_row = 0;
     width: 385px;
 }
 
+.fill {
+    filter: grayscale(100%);
+  }
+
+  .fill:hover {
+    filter: grayscale(0);
+  }  
+
+
 </style>
 
 <script>

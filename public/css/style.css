@@ -8084,6 +8084,7 @@ body {
 }
 /* Header Styles */
 #page_wrapper #header-wrapper {
+  position: fixed;
   width: 100%;
   height: 60px;
   background: #fff;
