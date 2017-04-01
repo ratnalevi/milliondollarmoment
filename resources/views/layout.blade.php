@@ -37,6 +37,7 @@ $logoUrl = $baseUrl . '/img/million_logo.jpg';
 
     <div class="menu-container"><ul id="top-menu" class="nav navbar-nav"><li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item menu-item-34"><a href="{{ $baseUrl }}">Home</a></li>
             <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="{{ $baseUrl }}/services">Services</a></li>
+            <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="{{ $baseUrl }}/gallery/">Gallery</a></li>
             <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="{{ $baseUrl }}/about/">About Us</a></li>
             <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="{{ $baseUrl }}/team/">Team</a></li>
             <li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="{{ $baseUrl }}/contact/">Contact</a></li>

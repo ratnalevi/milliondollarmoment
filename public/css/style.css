@@ -5598,12 +5598,7 @@ button.close {
   -moz-opacity: 0;
   opacity: 0;
 }
-.modal-backdrop.in {
-  filter: alpha(opacity=50);
-  -webkit-opacity: 0.5;
-  -moz-opacity: 0.5;
-  opacity: 0.5;
-}
+
 .modal-header {
   padding: 15px;
   border-bottom: 1px solid #e5e5e5;

@@ -51,7 +51,7 @@
 <?php
                                               
 $events = [
-    [ 'title' => "birthdays Wedding/anniversary<br>Bon voyage<br>Destination surprise<br>We can get it done anywhere in India", 'img' => 'img/services/surprise.jpg', 'url' => '/services/surprises/' ],
+    [ 'title' => "Surprise", 'img' => 'img/services/surprise.jpg', 'url' => '/services/surprises/' ],
     [ 'title' => 'Destination surprise ', 'img' => 'img/services/surprise.jpg', 'url' => '/contact' ],
     [ 'title' => 'Prank', 'img' => 'img/services/prank.jpg', 'url' => '/contact' ],
     [ 'title' => 'Delivery', 'img' => 'img/services/delivery.jpg', 'url' => '/contact' ]
