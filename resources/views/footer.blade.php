@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-6 col-sm-12 right-border">
                 <div class="footer-about">
-                    <h2 class="footer-title">About Us</h2>
+                    <h2 class="footer-title">Million Dollar Moment</h2>
                     <p>Have you ever dreamt of giving your loved ones a breath taking surprise which fills their soul with unspeakable joy and consolation that they laugh while tears are in eyes, sigh and sing all in a breath... Treasured to be as a memory, worth than a couple million dollars ... Where there is a will, there is a way!!! Take a chance in a million that you can do something to make your loved ones feel one in a billion...! Join us in making your dream come true. And here we do... your Million Dollar Moment.!!!!</p>
                 </div>
             </div>

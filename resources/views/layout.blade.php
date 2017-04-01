@@ -28,7 +28,7 @@ $currentPath = Route::getFacadeRoot()->current()->uri();
 $currentPathParts = explode('/', $currentPath);
 $currentPageType = strtolower( $currentPathParts[0] );
 $baseUrl = 'http://' . $_SERVER['HTTP_HOST'];
-$logoUrl = $baseUrl . '/img/million_logo.png';
+$logoUrl = $baseUrl . '/img/million_logo.jpg';
 
 ?>
 
@@ -38,7 +38,8 @@ $logoUrl = $baseUrl . '/img/million_logo.png';
     <div class="menu-container"><ul id="top-menu" class="nav navbar-nav"><li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item menu-item-34"><a href="{{ $baseUrl }}">Home</a></li>
             <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="{{ $baseUrl }}/services">Services</a></li>
             <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="{{ $baseUrl }}/about/">About Us</a></li>
-            <li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="{{ $baseUrl }}/contact/">Contact Us</a></li>
+            <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="{{ $baseUrl }}/team/">Team</a></li>
+            <li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="{{ $baseUrl }}/contact/">Contact</a></li>
         </ul></div>      <div class="clearfix">
     </div>
     <ul class="list-inline social-menu">
@@ -64,7 +65,7 @@ $logoUrl = $baseUrl . '/img/million_logo.png';
                         <img src="{{ $logoUrl }}" alt='Million Dollar Moments' />
                     </a>
                 </div>
-                <div class="col-md-9 col-sm-9 col-xs-9 text-right">
+                <div class="col-md-8 col-sm-8 col-xs-8 text-right">
                     <ul class="list-inline social-links">
                         <li><a href="https://www.instagram.com/themilliondollarmoment" target="_blank"><i style="font-size:16px" class="fa">&#xf16d;</i></a></li>
                         <li><a href="https://www.facebook.com/themilliondollarmoment" target="_blank"><i class="fa fa-facebook"></i></a></li>

@@ -17,7 +17,7 @@
     content: attr(title);
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 10px;
     padding: 0.5em 20px;
     width: 263px;
     background: rgba(0,0,0,0.8);
@@ -52,7 +52,7 @@
                                               
 $events = [
     [ 'title' => 'Birthday', 'img' => 'img/services/surprises/birthday.jpg', 'url' => '/contact' ],
-    [ 'title' => 'Anniversary/Wedding', 'img' => 'img/services/surprises/wedding.jpg', 'url' => '/contact' ],
+    [ 'title' => 'Anniversary / Wedding', 'img' => 'img/services/surprises/wedding.jpg', 'url' => '/contact' ],
     [ 'title' => 'Bon Voyage', 'img' => 'img/services/surprises/birthday.jpg', 'url' => '/contact' ],
     [ 'title' => 'Proposal', 'img' => 'img/services/surprises/proposal.jpg', 'url' => '/contact' ],
     [ 'title' => 'Get well soon', 'img' => 'img/services/surprises/birthday.jpg', 'url' => '/contact' ]
@@ -66,12 +66,8 @@ $per_row = 0;
         <div class="row">
             <div class="box">
                 <div class="col-lg-12">
+                    <h2 class="intro-text text-center"><strong>Surprise Events</strong></h2>
                     <hr>
-                    <h2 class="intro-text text-center">Surprise Events,
-                        <strong> Professionals in surprises</strong>
-                    </h2>
-                    <hr>
-                    <br>
                 </div>
             </div>
         </div>

@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::get('contact', ['as' => 'contact', 'uses' => 'ContactUSController@create']);
 Route::post('contact', ['as' => 'contact_store', 'uses' => 'ContactUSController@store']);
 
+Route::get('team', ['as' => 'team', 'uses' => 'AboutUSController@team']);
 Route::get('about', ['as' => 'about', 'uses' => 'AboutUSController@about']);
 
 Route::get('services', ['as' => 'services', 'uses' => 'ServicesController@index']);

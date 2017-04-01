@@ -3,111 +3,61 @@
 @extends('layout')
 
 @section('content')
-<div class="container">
+<style>
+    .about-us-image{
+        position:relative; 
+        max-width: 100%;
+        filter: grayscale(100);
+    }
+
+    .about-us-image:hover {
+        filter: grayscale(0);
+    }
+
+    .about-us-container{
+        padding-left: 100px
+    }
+
+    @media (max-width: 767px) {
+        .about-us-container{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+</style>
+<div class="container about-us-container">
 
     <div class="row">
         <div class="box">
             <div class="col-lg-12">
-                <hr>
-                <h2 class="intro-text text-center">Our Team,
-                    <strong> Professionals in surprises</strong>
-                </h2>
-                <hr>
-                <p>Use as many boxes as you like, and put anything you want in them! They are great for just about anything, the sky's the limit!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                <h2 class="intro-text text-center"><strong>About Us</strong></h2>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div col-md-12 col-sm-12 col-xs-12">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <h3>Who are we ?</h3>
+                <p>Not everyone can make you smile, not everyone except you can make them smile either... Who are we then? We can make them smile longer, brighter and forever. We can make their moments worth Million Dollar</p>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-6">
+                <img class="about-us-image" src="{{ asset('img/services/surprises/birthday.jpg') }}" alt="">
             </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-lg-4 col-sm-6">
-            <div class="card hovercard">
-                <div class="cardheader">
-                </div>
-                <div class="avatar">
-                    <img alt="" src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/13100953_10208285631391758_8024476089267854559_n.jpg?oh=de1201fe19fc51fae7e1b4dc92cb7f3a&oe=593E13C3">
-                </div>
-                <div class="info">
-                    <div class="title">
-                        <a target="_blank" href="http://scripteden.com/">Antipas Guda</a>
-                    </div>
-                    <div class="desc">Enterprenuer</div>
-                    <div class="desc">Event Specialist</div>
-                </div>
-                <div class="bottom">
-                    <a class="btn btn-primary btn-twitter btn-sm" href="https://in.linkedin.com/in/levi-ratnakar-b817116a">
-                        <i class="fa fa-linkedin-square "></i>
-                    </a>
-                    <a class="btn btn-danger btn-sm" rel="publisher"
-                       href="https://plus.google.com/u/2/114231111689419689901">
-                        <i class="fa fa-google-plus"></i>
-                    </a>
-                    <a class="btn btn-primary btn-sm" rel="publisher"
-                       href="https://www.facebook.com/LeviBunty123">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                    
-                </div>
+        <div col-md-12 col-sm-12 col-xs-12">
+            <div class="col-md-4 col-sm-6 col-xs-6">
+                <img class="about-us-image" src="{{ asset('img/services/surprises/birthday.jpg') }}" alt="" >
             </div>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-            <div class="card hovercard">
-                <div class="cardheader">
-                </div>
-                <div class="avatar">
-                    <img alt="" src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/13100953_10208285631391758_8024476089267854559_n.jpg?oh=de1201fe19fc51fae7e1b4dc92cb7f3a&oe=593E13C3">
-                </div>
-                <div class="info">
-                    <div class="title">
-                        <a target="_blank" href="http://scripteden.com/">Allam Levi</a>
-                    </div>
-                    <div class="desc">Web Developer</div>
-                    <div class="desc">Tech geek</div>
-                </div>
-                <div class="bottom">
-                    <a class="btn btn-primary btn-twitter btn-sm" href="https://in.linkedin.com/in/levi-ratnakar-b817116a">
-                        <i class="fa fa-linkedin-square "></i>
-                    </a>
-                    <a class="btn btn-danger btn-sm" rel="publisher"
-                       href="https://plus.google.com/u/2/114231111689419689901">
-                        <i class="fa fa-google-plus"></i>
-                    </a>
-                    <a class="btn btn-primary btn-sm" rel="publisher"
-                       href="https://www.facebook.com/LeviBunty123">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                   
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-            <div class="card hovercard">
-                <div class="cardheader">
-                </div>
-                <div class="avatar">
-                    <img alt="" src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/13100953_10208285631391758_8024476089267854559_n.jpg?oh=de1201fe19fc51fae7e1b4dc92cb7f3a&oe=593E13C3">
-                </div>
-                <div class="info">
-                    <div class="title">
-                        <a target="_blank" href="http://scripteden.com/">Allam Levi</a>
-                    </div>
-                    <div class="desc">Web Developer</div>
-                    <div class="desc">Tech geek</div>
-                </div>
-                <div class="bottom">
-                    <a class="btn btn-primary btn-twitter btn-sm" href="https://in.linkedin.com/in/levi-ratnakar-b817116a">
-                        <i class="fa fa-linkedin-square "></i>
-                    </a>
-                    <a class="btn btn-danger btn-sm" rel="publisher"
-                       href="https://plus.google.com/u/2/114231111689419689901">
-                        <i class="fa fa-google-plus"></i>
-                    </a>
-                    <a class="btn btn-primary btn-sm" rel="publisher"
-                       href="https://www.facebook.com/LeviBunty123">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                   
-                </div>
+            <div col-md-6 col-sm-6 col-xs-6">
+                <h3>What we do ?</h3>
+                <p>We surprise, we celebrate, we express, we do the Miracle and bind their hearts close to yours.</p>
             </div>
         </div>
     </div>

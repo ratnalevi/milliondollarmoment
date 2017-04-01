@@ -17,7 +17,7 @@
     content: attr(title);
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 10px;
     padding: 0.5em 20px;
     width: 263px;
     background: rgba(0,0,0,0.8);
@@ -29,9 +29,9 @@
     -o-transition: 0.5s;
     -ms-transition: 0.5s;
   }
+  
   a.hovertext:hover::after, a.hovertext:focus::after {
     opacity: 1.0;
-    filter: grayscale(0);
   }
 
   .event-type {
@@ -43,7 +43,7 @@
   }  
 
   .img-responsive{
-    height: 320px;
+    height: 400px;
   }
 
  </style>
@@ -51,7 +51,7 @@
 <?php
                                               
 $events = [
-    [ 'title' => 'Surprise', 'img' => 'img/services/surprise.jpg', 'url' => '/services/surprises/' ],
+    [ 'title' => "birthdays Wedding/anniversary<br>Bon voyage<br>Destination surprise<br>We can get it done anywhere in India", 'img' => 'img/services/surprise.jpg', 'url' => '/services/surprises/' ],
     [ 'title' => 'Destination surprise ', 'img' => 'img/services/surprise.jpg', 'url' => '/contact' ],
     [ 'title' => 'Prank', 'img' => 'img/services/prank.jpg', 'url' => '/contact' ],
     [ 'title' => 'Delivery', 'img' => 'img/services/delivery.jpg', 'url' => '/contact' ]
@@ -65,12 +65,9 @@ $per_row = 0;
         <div class="row">
             <div class="box">
                 <div class="col-lg-12">
+                    <h2 class="intro-text text-center"><strong>Services</strong></h2>
                     <hr>
-                    <h2 class="intro-text text-center">Services Available</h2>
-                    <hr>
-                    <p>Use as many boxes as you like, and put anything you want in them! They are great for just about anything, the sky's the limit!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                    <br>
+                    
                 </div>
             </div>
         </div>
