@@ -8135,8 +8135,7 @@ body {
 }
 #page_wrapper #header-wrapper .logo a {
   display: inline-block;
-  padding: 10px;
-  width: 150px;
+  width: 120px;
 }
 @media only screen and (max-width: 768px) {
   #page_wrapper #header-wrapper .logo a

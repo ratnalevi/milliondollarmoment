@@ -33,7 +33,7 @@
 
     }
 
-    //setInterval( shiftSlide, number_of_seconds * 1000);
+    setInterval( shiftSlide, number_of_seconds * 1000);
 
     </script>
 
@@ -72,9 +72,11 @@
 
     <?php 
         $images = [ 
-            [ 'img' => 'img/homepage/homepage_1.jpg', 'caption' => 'Caption goes here 1' ],
-            [ 'img' => 'img/homepage/homepage_2.jpeg', 'caption' => 'Caption goes here 2' ],
-            [ 'img' => 'img/homepage/homepage_3.jpg', 'caption' => 'Caption goes here 3' ],
+            [ 'img' => 'img/homepage/homepage_1.jpg', 'caption' => 'You all worked so hard and it amazes me how you never seem to get hassled. You went above and beyond. An incredible night', 'author' => 'Ranganath Charyulu' ],
+            [ 'img' => 'img/homepage/homepage_2.jpeg', 'caption' => 'Planning a surprise event with #MillionDollarMoment is the best choice one can make. That was really lot of fun yesterday nyt @ my friends bday party. That was really lovely.', 'author' => 'Swetha Allam' ],
+            [ 'img' => 'img/homepage/homepage_3.jpg', 'caption' => 'Its completely amazing...and thanks to all of u for coming with such a wonderful idea..!', 'author' => 'Nikita Singh' ],
+            [ 'img' => 'img/homepage/homepage_4.jpg', 'caption' => 'The name itself resembles "Million dollar"of smiles u guys had done a great job,njoyed the surprise...thank you...keep growing...all the best..', 'author' => 'Rajini Vinod' ],
+            [ 'img' => 'img/homepage/homepage_5.jpg', 'caption' => 'Awsome tym vth u people all U all made our day so special it\'s really fantastic.... Keep going on.Thank u soo much.', 'author' => 'Sai Mounica Pasupuleti' ],
         ];
     ?>
 
@@ -85,7 +87,7 @@
                 <li class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: {!! ( $i == 0 ) ? 'block' : 'none' !!}; z-index: {!! ( $i == 0 ) ? 2 : 1 !!};">
                     <div class="flex-slide-data">
                         <img src="{{ asset( $images[ $i ]['img'] ) }}" alt="" draggable="false">
-                        <div class="caption"><br>{{ $images[ $i ]['caption'] }}</div>
+                        <div class="caption"><br><span>{{ $images[ $i ]['caption'] }}</span><br><span style="font-style: italic;">-{{ $images[ $i ]['author'] }}</span></div>
                     </div>
                 </li>
             @endfor

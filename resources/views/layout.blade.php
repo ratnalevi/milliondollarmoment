@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Million Dollar Moments</title>
 
+    <link rel="icon" type="image/jpeg" href="img/favicon.jpg" />
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <link rel='stylesheet' id='Main-Style-css'  href="{{ asset('/css/style.css') }}" type='text/css' media='all' />    
@@ -26,7 +28,7 @@ $currentPath = Route::getFacadeRoot()->current()->uri();
 $currentPathParts = explode('/', $currentPath);
 $currentPageType = strtolower( $currentPathParts[0] );
 $baseUrl = 'http://' . $_SERVER['HTTP_HOST'];
-$logoUrl = $baseUrl . '/img/million_logo.jpg';
+$logoUrl = $baseUrl . '/img/million_logo.png';
 
 ?>
 
@@ -34,7 +36,7 @@ $logoUrl = $baseUrl . '/img/million_logo.jpg';
     <h3>Menu</h3>
 
     <div class="menu-container"><ul id="top-menu" class="nav navbar-nav"><li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item menu-item-34"><a href="{{ $baseUrl }}">Home</a></li>
-            <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="{{ $baseUrl }}/surprise">Services</a></li>
+            <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="{{ $baseUrl }}/services">Services</a></li>
             <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="{{ $baseUrl }}/about/">About Us</a></li>
             <li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="{{ $baseUrl }}/contact/">Contact Us</a></li>
         </ul></div>      <div class="clearfix">
@@ -57,12 +59,12 @@ $logoUrl = $baseUrl . '/img/million_logo.jpg';
                         </button>
                     </nav>
                 </div>
-                <div class="col-md-5 col-sm-5 col-xs-4 logo text-left">
+                <div class="col-md-2 col-sm-2 col-xs-2 logo text-left">
                     <a href="{{ $baseUrl  }}">
-                        <img src="{{ $logoUrl }}" style="width: 35%; max-width: 35%;" alt='Million Dollar Moments' />
+                        <img src="{{ $logoUrl }}" alt='Million Dollar Moments' />
                     </a>
                 </div>
-                <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                <div class="col-md-9 col-sm-9 col-xs-9 text-right">
                     <ul class="list-inline social-links">
                         <li><a href="https://www.instagram.com/themilliondollarmoment" target="_blank"><i style="font-size:16px" class="fa">&#xf16d;</i></a></li>
                         <li><a href="https://www.facebook.com/themilliondollarmoment" target="_blank"><i class="fa fa-facebook"></i></a></li>
