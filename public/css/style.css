@@ -8090,7 +8090,7 @@ body {
 /* Header Styles */
 #page_wrapper #header-wrapper {
   width: 100%;
-  height: 75px;
+  height: 60px;
   background: #fff;
   z-index: 5;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
@@ -8101,7 +8101,7 @@ body {
 }
 #page_wrapper #header-wrapper ul.social-links
 {
-  margin-top:20px;
+  margin-top:10px;
 }
 #page_wrapper #header-wrapper ul.social-links li
 {
@@ -8136,7 +8136,7 @@ body {
 #page_wrapper #header-wrapper .logo a {
   display: inline-block;
   padding: 10px;
-  width: 170px;
+  width: 150px;
 }
 @media only screen and (max-width: 768px) {
   #page_wrapper #header-wrapper .logo a
@@ -8162,7 +8162,7 @@ body {
   background: none;
   border: none;
   margin: 0;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 #page_wrapper .navbar-default .navbar-toggle {
   border: none;
@@ -8320,7 +8320,6 @@ body.home #page_wrapper {
 }
 #page_wrapper {
   z-index: 1;
-  padding-bottom: 40px;
 }
 #page_wrapper .slider-wrapper {
   display: block;
@@ -8995,4 +8994,8 @@ border: 1px solid #DADADA;
 #page_wrapper .body-wrapper .awards-wrapper:hover .title
 {
   bottom: 0;
+}
+
+.contact-info{
+  padding-left: 40px;
 }

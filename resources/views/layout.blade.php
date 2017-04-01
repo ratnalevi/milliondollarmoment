@@ -34,7 +34,7 @@ $logoUrl = $baseUrl . '/img/million_logo.jpg';
     <h3>Menu</h3>
 
     <div class="menu-container"><ul id="top-menu" class="nav navbar-nav"><li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item menu-item-34"><a href="{{ $baseUrl }}">Home</a></li>
-            <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="{{ $baseUrl }}/surprise">Surprises</a></li>
+            <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="{{ $baseUrl }}/surprise">Services</a></li>
             <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="{{ $baseUrl }}/about/">About Us</a></li>
             <li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="{{ $baseUrl }}/contact/">Contact Us</a></li>
         </ul></div>      <div class="clearfix">
@@ -77,32 +77,7 @@ $logoUrl = $baseUrl . '/img/million_logo.jpg';
 
     @if( $currentPageType !== '' )
         <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-        @include('footer')
-    @else 
-        <link rel="stylesheet" href="{{ asset('css/home-footer.css') }}">
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <span class="text-left">&copy; 2017 Million Dollar Moments. All Rights Reserved.</span>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <ul class="list-inline">
-                            <li>
-                                <a href="{{ $baseUrl }}">Home</a>
-                            </li>
-                            <li>
-                                <a href="{{ $baseUrl }}/about">About Us</a>
-                            </li>
-                            <li>
-                                <a href="{{ $baseUrl }}/contact">Contact</a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        @include('footer')        
     @endif
 </body>
 

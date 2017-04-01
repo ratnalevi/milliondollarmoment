@@ -19,7 +19,7 @@
     left: 0;
     bottom: 0;
     padding: 0.5em 20px;
-    width: 360px;
+    width: 263px;
     background: rgba(0,0,0,0.8);
     text-decoration: none !important;
     color: #fff;
@@ -42,9 +42,26 @@
     filter: grayscale(0);
   }  
 
+  .img-responsive{
+    height: 320px;
+  }
+
  </style>
 
+<?php
+
+$events = [
+    [ 'title' => 'Birthday', 'img' => 'img/surprises/birthday.jpg' ],
+    [ 'title' => 'Wedding', 'img' => 'img/surprises/wedding.jpg' ],
+    [ 'title' => 'Anniversary', 'img' => 'img/surprises/anniversary.jpg' ],
+    [ 'title' => 'Proposal', 'img' => 'img/surprises/proposal.jpg' ]
+];
+$events_per_row = 4;
+$per_row = 0;
+
+?>
     <div class="container">
+
         <div class="row">
             <div class="box">
                 <div class="col-lg-12">
@@ -60,52 +77,21 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-4 portfolio-item event-type"> 
-                <p>
-                    <a class="hovertext" href="#" title="Birthday">
-                    <img class="img-responsive" src="{{ asset('img/surprises/birthday.jpg') }}" alt="" >
-                    </a>
-                </p>
-            </div>
-            <div class="col-md-4 portfolio-item event-type">
-                <p>
-                    <a class="hovertext" href="#" title="Wedding">
-                    <img class="img-responsive" src="{{ asset('img/surprises/anniversary.jpg') }}" alt="">
-                    </a>
-                </p>
-            </div>
-            <div class="col-md-4 portfolio-item event-type">
-                <p>
-                    <a class="hovertext" href="#" title="Wedding">
-                    <img class="img-responsive" src="{{ asset('img/surprises/wedding.jpg') }}" alt="">
-                    </a>
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4 portfolio-item event-type">
-                <p>
-                    <a class="hovertext" href="#" title="Proposal">
-                    <img class="img-responsive" src="{{ asset('img/surprises/proposal.jpg') }}" alt="">
-                    </a>
-                </p>
-            </div>
-            <div class="col-md-4 portfolio-item event-type">
-                <p>
-                    <a class="hovertext" href="#" title="Bon Voyage">
-                    <img class="img-responsive" src="{{ asset('img/surprises/bon_voyage.png') }}" alt="">
-                    </a>
-                </p>
-            </div>
-            <div class="col-md-4 portfolio-item event-type">
-                <p>
-                    <a class="hovertext" href="#" title="Get Well Soon">
-                    <img class="img-responsive" src="{{ asset('img/surprises/get_well_soon.png') }}" alt="">
-                    </a>
-                </p>
-            </div>
-        </div>
+        @for( $i = 0; $i < sizeof( $events ); $i++ )
+            @if( $i == 0 || $i + 1 % $events_per_row == 0 )
+                <div class="row">
+            @endif
+                    <div class="col-md-3 portfolio-item event-type"> 
+                        <p>
+                            <a class="hovertext" href="#" title="{{ $events[ $i ]['title'] }}">
+                            <img class="img-responsive" src="{{ asset( $events[ $i ]['img'] ) }}" alt="" >
+                            </a>
+                        </p>
+                    </div>
+                    <?php $per_row++ ?>
+            @if( $per_row == $events_per_row )
+                </div>
+            @endif
+        @endfor
     </div>
 @endsection

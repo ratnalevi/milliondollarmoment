@@ -4,6 +4,8 @@
     
     <script>
 
+    var number_of_seconds = 3;
+
     function shiftSlide(){
 
         var slides = $('#million-dollar-slides').find('li');
@@ -18,6 +20,7 @@
                 $(this).removeClass('flex-active-slide')
                 $(this).css('zIndex','1');
                 $(this).css('opacity', '0');
+                $(this).css('display', 'none');
             }
         });
 
@@ -25,42 +28,68 @@
             nextElem.addClass('flex-active-slide');
             nextElem.css('zIndex', '2');
             nextElem.css('opacity', '1');
+            nextElem.css('display', 'block');
         }
 
     }
 
-    setInterval( shiftSlide, 3000);
+    //setInterval( shiftSlide, number_of_seconds * 1000);
 
     </script>
+
+    <style>
+        .flex-slide-data .caption { 
+            position: fixed; 
+            height: 100px; 
+            bottom: 80px; 
+            width: 100%;
+            left: 0px; 
+            color: #ffffff; 
+            background: black; 
+            text-align:center; 
+            font-weight:bold; 
+            opacity:0.6; 
+            white-space: nowrap;
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: 400;
+            color: rgb(255, 255, 255);
+            font-family: Lato;
+            visibility: inherit;
+            border-width: 0px;
+            margin: 0px;
+            padding: 0px;
+            letter-spacing: 0px;
+        } 
+
+        .flex-slide-data img{
+            width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            position: fixed;
+        }
+    </style>
+
+    <?php 
+        $images = [ 
+            [ 'img' => 'img/homepage/homepage_1.jpg', 'caption' => 'Caption goes here 1' ],
+            [ 'img' => 'img/homepage/homepage_2.jpeg', 'caption' => 'Caption goes here 2' ],
+            [ 'img' => 'img/homepage/homepage_3.jpg', 'caption' => 'Caption goes here 3' ],
+        ];
+    ?>
 
     <section class="slider-wrapper">
     <div class="flexislider">
         <ul class="slides" id="million-dollar-slides">
-        <li class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;">
-                <div class="flex-slide-data">
-                    <img src="{{ asset( 'img/homepage/homepage_1.jpg' ) }}" alt="" draggable="false">
-                </div>
-            </li>
-            <li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
-                <div class="flex-slide-data">
-                    <img src="{{ asset( 'img/homepage/homepage_2.jpeg' ) }}" alt="" draggable="false">
-                </div>
-            </li>
-            <li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
-                <div class="flex-slide-data">
-                    <img src="{{ asset( 'img/homepage/homepage_3.jpg' ) }}" alt="" draggable="false">
-                </div>
-            </li>
+            @for( $i = 0; $i < sizeof( $images ); $i++ )
+                <li class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: {!! ( $i == 0 ) ? 'block' : 'none' !!}; z-index: {!! ( $i == 0 ) ? 2 : 1 !!};">
+                    <div class="flex-slide-data">
+                        <img src="{{ asset( $images[ $i ]['img'] ) }}" alt="" draggable="false">
+                        <div class="caption"><br>{{ $images[ $i ]['caption'] }}</div>
+                    </div>
+                </li>
+            @endfor
         </ul>
-    <ol class="flex-control-nav flex-control-paging"><li><a class="flex-active">1</a></li><li><a class="">2</a></li><li><a class="">3</a></li><li><a class="">4</a></li></ol><ul class="flex-direction-nav"><li><a class="flex-prev" href="#">Previous</a></li><li><a class="flex-next" href="#">Next</a></li></ul></div>
-    <div class="home-page-content">
-                    <div class="page-content container">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                            </div>
-                </div>
-            </div>
-            </div>
-    
+    </div>
 </section>
 @endsection
