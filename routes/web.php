@@ -18,11 +18,14 @@ Route::get('/', function () {
 Route::get('contact', ['as' => 'contact', 'uses' => 'ContactUSController@create']);
 Route::post('contact', ['as' => 'contact_store', 'uses' => 'ContactUSController@store']);
 
+Route::get('faq', ['as' => 'faq', 'uses' => 'ContactUSController@faq']);
+Route::get('testimonials', ['as' => 'faq', 'uses' => 'ContactUSController@testimonials']);
+
 Route::get('team', ['as' => 'team', 'uses' => 'AboutUSController@team']);
 Route::get('about', ['as' => 'about', 'uses' => 'AboutUSController@about']);
 
-Route::get('services', ['as' => 'services', 'uses' => 'ServicesController@index']);
+Route::get('services', ['as' => 'services', 'uses' => 'ServicesController@test']);
 
 Route::get('gallery', ['as' => 'gallery', 'uses' => 'GalleryController@index']);
 
-Route::get('services/surprises', ['as' => 'services', 'uses' => 'ServicesController@surprises']);
+Route::get('services/surprises/birthday', 'ServicesController@birthday');

@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="{{ asset('css/home-footer.css') }}">
-<footer>
+<footer style="bottom: 0; right: 0; left: 0; margin-top: 20px">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12">

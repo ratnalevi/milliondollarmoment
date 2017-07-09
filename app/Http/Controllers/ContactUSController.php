@@ -35,7 +35,13 @@ class ContactUSController extends Controller
             });
 
         return \Redirect::route('contact')->with('message', 'Thanks for contacting us!');
+    }
 
+    public function faq(){
+        return view('faq');
+    }
 
+    public function testimonials(){
+        return view('testimonials');
     }
 }

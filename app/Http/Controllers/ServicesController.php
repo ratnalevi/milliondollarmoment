@@ -14,4 +14,12 @@ class ServicesController extends Controller
     public function surprises(){
     	return view('services.surprises.index');	
     }
+
+    public function test(){
+    	return view('services.test');	
+    }
+
+    public function birthday(){
+        return view('services.surprises.birthday');   
+    }
 }
