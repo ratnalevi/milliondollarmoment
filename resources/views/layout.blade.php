@@ -8,16 +8,15 @@
 
     <link rel="icon" type="image/jpeg" href="img/favicon.jpg" />
 
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel='stylesheet' id='Main-Style-css'  href="{{ asset('/css/style.css') }}" type='text/css' media='all' />    
+    <link rel='stylesheet' id='Main-Style-css'  href="{{ asset('/css/style.css') }}" type='text/css' media='all'/>
     <link rel='stylesheet' id='menu-style-css'  href="{{ asset('/css/component.css') }}" type='text/css' media='all' />
     <link rel='stylesheet' id='carousel-Style-css'  href='http://geethaarts.com/wp-content/themes/geetha/framework/css/flexslider.css?ver=1.0' type='text/css' media='all' />
-
     <link href='http://fonts.googleapis.com/css?family=Exo:400,900' rel='stylesheet' type='text/css'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 <body class="hidden-sn">
@@ -87,12 +86,11 @@ $logoUrl = $baseUrl . '/img/million_logo.jpg';
         </div><!-- End Container -->
     </header>
 
-    @yield('content')
+    <div class="" style="padding-top: 60px">
+        @yield('content')
+    </div>
 
-    @if( $currentPageType !== '' )
-        <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-        @include('footer')        
-    @endif
+    @include('footer')
     
     </div>
 </body>

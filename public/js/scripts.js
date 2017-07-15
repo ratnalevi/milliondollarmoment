@@ -50,4 +50,22 @@
    });
    $(".movie-list li:nth-child(1)  a").trigger('click');
 
+    var windowHeight = $( window ).height();
+    var headerHeight = $('#header-wrapper').height();
+    var footerHeight = $('#footer-wrapper').height();
+
+    console.log( windowHeight );
+    console.log( typeof windowHeight );
+
+    console.log( headerHeight );
+    console.log( typeof headerHeight );
+        
+        console.log( footerHeight );
+    console.log( typeof footerHeight );
+
+    var remSpace = windowHeight - headerHeight - footerHeight + 50;
+    console.log( remSpace );
+
+    $('.item').css('min-height', remSpace + 'px' );
+
  });
