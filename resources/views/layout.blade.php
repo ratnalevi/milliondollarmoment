@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Route;
 $currentPath = Route::getFacadeRoot()->current()->uri();
 $currentPathParts = explode('/', $currentPath);
 $currentPageType = strtolower( $currentPathParts[0] );
-$baseUrl = 'http://' . $_SERVER['HTTP_HOST'];
+$baseUrl = 'https://' . $_SERVER['HTTP_HOST'];
 $logoUrl = $baseUrl . '/img/million_logo.jpg';
 
 ?>
