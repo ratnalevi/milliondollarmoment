@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel='stylesheet' id='Main-Style-css'  href="{{ asset('/css/style.css') }}" type='text/css' media='all'/>
     <link rel='stylesheet' id='menu-style-css'  href="{{ asset('/css/component.css') }}" type='text/css' media='all' />
-    <link rel='stylesheet' id='carousel-Style-css'  href='{!! asset('/css/flexslider,css') !!}' type='text/css' media='all' />
-    <link href='http://fonts.googleapis.com/css?family=Exo:400,900' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' id='carousel-Style-css'  href='{!! asset('/css/flexslider.css') !!}' type='text/css' media='all' />
+    <link href='https://fonts.googleapis.com/css?family=Exo:400,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
