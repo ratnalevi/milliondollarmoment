@@ -15,7 +15,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-
 Route::get('contact', ['as' => 'contact', 'uses' => 'ContactUSController@create']);
 Route::post('contact', ['as' => 'contact_store', 'uses' => 'ContactUSController@store']);
 

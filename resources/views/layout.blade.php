@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel='stylesheet' id='Main-Style-css'  href="{{ asset('/css/style.css') }}" type='text/css' media='all'/>
     <link rel='stylesheet' id='menu-style-css'  href="{{ asset('/css/component.css') }}" type='text/css' media='all' />
-    <link rel='stylesheet' id='carousel-Style-css'  href='http://geethaarts.com/wp-content/themes/geetha/framework/css/flexslider.css?ver=1.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='carousel-Style-css'  href='{!! script('css/flexslider,css') !!}' type='text/css' media='all' />
     <link href='http://fonts.googleapis.com/css?family=Exo:400,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -96,9 +96,9 @@ $logoUrl = $baseUrl . '/img/million_logo.jpg';
 </body>
 
 <script type='text/javascript' src="{{ asset('js/classie.js') }}"></script>
-<script type='text/javascript' src="{{ asset('js/scripts.js') }}"</script>
-<script type='text/javascript' src='http://geethaarts.com/wp-content/themes/geetha/framework/js/jquery.flexslider-min.js?ver=1.0'></script>
-<script type="text/javascript" src="http://geethaarts.com/wp-content/themes/geetha/framework/js/vendor/imagesloaded.js?ver=3.0.0"></script>
-<script type="text/javascript" src="http://geethaarts.com/wp-content/themes/geetha/framework/js/vendor/isotope.min.js?ver=3.0.0"></script>
+<script type='text/javascript' src="{{ asset('js/scripts.js') }}"></script>
+<script type='text/javascript' src="{!! script('js/jquery.flexslider-min.js') !!}"></script>
+<script type="text/javascript" src="{!! script('js/imagesloaded.js') !!}"></script>
+<script type="text/javascript" src="{!! script('js/isotope.min.js') !!}"></script>
 
 </html>
